@@ -1,54 +1,77 @@
 .header-main {
     height: 5%;
     width: auto;
-    background-color: #8e8e8e;
+    background-color: rgba(28, 28, 28, 0.7);
+}
+.header-icon {
+    width: 80px;
+    height: 65%;
+    object-fit: cover;
+    margin: 5px 0 0 20px;
+    border-radius: 3px;
 }
 
 .main-page {
     height: 92%;
+    color: #464646;
+    background-color: rgba(239, 239, 239, 0.6);
 }
 
 .main-sidebar {
     float: left;
     height: 100%;
     width: 120px;
-    background-color: rgb(113, 113, 113);
+    background-color: rgba(28, 28, 28, 0.7);
+/*    background: linear-gradient(to bottom right,#717171,rgba(157, 157, 157, 0.73));*/
+    overflow-y: scroll;
 }
 
 .sidebar-item {
-    padding: 8px 0 8px 0;
+    height: 15px;
+    padding: 8px 0 8px 10px;
     color: ghostwhite;
     font-family: Verdana;
     font-size: 13px;
-    border-bottom: 1px solid;
-    border-color: rgba(0, 0, 0, 0.25);
-    text-align: center;
+}
+.sidebar-subitem {
+    height: 15px;
+    padding: 8px 0 8px 20px;
+    color: ghostwhite;
+    font-family: Verdana;
+    font-size: 13px;
 }
 
 .sidebar-section {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .sidebar-section-icon {
-    background-image: url(../images/right-arrow.svg);
+    background-image: url(../images/ic_keyboard_arrow_left_black_48px.svg);
     background-repeat: no-repeat;
-    background-position: right;
+    background-size: cover;
     height: 15px;
-    width: 12px;
-    margin-left: 5px;
-}
-
-.sidebar-section-text {
-    width: 120px;
+    width: 15px;
+    margin: 0 5px 0 0;
     float: right;
 }
 
+.sidebar-section-text {
+    width: 80px;
+    float: left;
+}
+
 .sidebar-item:hover {
-    padding: 8px 0 8px 4px;
-    background-color: rgb(195, 195, 195);
+    padding: 8px 0 8px 12px;
+    background-color: rgb(132, 132, 132);
     cursor: pointer;
-    transition-duration: 0.8s;
+    transition-duration: 0.2s;
+    color: whitesmoke;
+}
+.sidebar-subitem:hover {
+    background-color: rgb(132, 132, 132);
+    cursor: pointer;
+    transition-duration: 0.2s;
     color: whitesmoke;
 }
 
@@ -66,6 +89,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #8e8e8e;
+    background-color: #848484;
     color: white;
+    border-top: 1px solid;
+    border-color: rgba(0, 0, 0, 0.25);
 }
