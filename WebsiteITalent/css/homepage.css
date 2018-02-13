@@ -1,14 +1,58 @@
+/*--- HEADER REGION ---*/
 .header-main {
     height: 5%;
     width: auto;
     background-color: rgba(28, 28, 28, 0.7);
 }
+
 .header-icon {
     width: 80px;
     height: 65%;
     object-fit: cover;
     margin: 5px 0 0 20px;
+    padding: 2px 4px 2px 4px;
     border-radius: 3px;
+}
+
+.header-icon:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.20);
+    transition-duration: 0.4s;
+}
+
+.header-language {
+    float: right;
+    width: 100px;
+    margin: 7px 10px 0 0;
+}
+
+.language-text {
+    font-family: Verdana;
+    cursor: default;
+    font-size: 10px;
+    color: rgba(239, 239, 239, 0.99);
+    float: left;
+    width: 80%;
+    padding-top: 5px;
+    /*    display: none;*/
+}
+
+.language-NL,
+.language-FR {
+    margin-right: 15%;
+}
+
+.language-text a:hover {
+    color: white;
+}
+
+.header-language-icon {
+    background-image: url(../images/ic_language_white_48px.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    float: right;
 }
 
 .main-page {
@@ -17,12 +61,13 @@
     background-color: rgba(239, 239, 239, 0.6);
 }
 
+/*--- SIDEBAR REGION ---*/
 .main-sidebar {
     float: left;
     height: 100%;
     width: 120px;
     background-color: rgba(28, 28, 28, 0.7);
-/*    background: linear-gradient(to bottom right,#717171,rgba(157, 157, 157, 0.73));*/
+    /*    background: linear-gradient(to bottom right,#717171,rgba(157, 157, 157, 0.73));*/
     overflow-y: scroll;
 }
 
@@ -33,12 +78,28 @@
     font-family: Verdana;
     font-size: 13px;
 }
+
 .sidebar-subitem {
     height: 15px;
     padding: 8px 0 8px 20px;
     color: ghostwhite;
     font-family: Verdana;
     font-size: 13px;
+}
+
+.sidebar-item:hover {
+    padding: 8px 0 8px 12px;
+    background-color: rgb(132, 132, 132);
+    cursor: pointer;
+    transition-duration: 0.2s;
+    color: whitesmoke;
+}
+
+.sidebar-subitem:hover {
+    background-color: rgb(132, 132, 132);
+    cursor: pointer;
+    transition-duration: 0.2s;
+    color: whitesmoke;
 }
 
 .sidebar-section {
@@ -61,20 +122,7 @@
     float: left;
 }
 
-.sidebar-item:hover {
-    padding: 8px 0 8px 12px;
-    background-color: rgb(132, 132, 132);
-    cursor: pointer;
-    transition-duration: 0.2s;
-    color: whitesmoke;
-}
-.sidebar-subitem:hover {
-    background-color: rgb(132, 132, 132);
-    cursor: pointer;
-    transition-duration: 0.2s;
-    color: whitesmoke;
-}
-
+/*--- CONTENT REGION ---*/
 .main-content {
     font-family: Verdana;
     overflow-y: hidden;
@@ -82,6 +130,7 @@
     width: auto;
 }
 
+/*--- FOOTER REGION ---*/
 .main-footer {
     font-family: sans-serif;
     font-size: 10px;
