@@ -34,7 +34,7 @@
     float: left;
     width: 80%;
     padding-top: 5px;
-    /*    display: none;*/
+    display: none;
 }
 
 .language-NL,
@@ -53,8 +53,15 @@
     height: 20px;
     width: 20px;
     float: right;
+    border-radius: 10px;
+}
+.header-language-icon:hover {
+    cursor: pointer;
+    box-shadow: 0 0 4px white;
+    transition-duration: 0.3s;
 }
 
+/*--- SIDEBAR+CONTENT REGION ---*/
 .main-page {
     height: 92%;
     color: #464646;
@@ -79,12 +86,27 @@
     font-size: 13px;
 }
 
+.sidebar-item.active {
+    padding: 8px 0 8px 12px;
+    background-color: rgb(132, 132, 132);
+    color: whitesmoke;
+}
+
+.sidebar-submenu {
+    display: none;
+    font-family: Verdana;
+    font-size: 12px;
+}
+
 .sidebar-subitem {
     height: 15px;
     padding: 8px 0 8px 20px;
     color: ghostwhite;
-    font-family: Verdana;
-    font-size: 13px;
+}
+
+.sidebar-subitem.active {
+    background-color: rgb(132, 132, 132);
+    color: whitesmoke;
 }
 
 .sidebar-item:hover {

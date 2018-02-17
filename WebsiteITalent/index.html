@@ -8,37 +8,39 @@
 
 <body>
     <header class="header-main">
-        <a href="https://www.hogent.be/en/">
+        <a href="https://www.hogent.be/en/" target="_blank">
             <image class="header-icon" src="images/logo_HoGent_wit.png"></image>
         </a>
         <div class="header-language">
             <div class="language-text">
-            <a class="language-NL">NL</a>
-            <a class="language-FR">FR</a>
-            <a class="language-EN">EN</a>
-                </div>
-        <div class="header-language-icon"></div>
+                <a class="language-NL">NL</a>
+                <a class="language-FR">FR</a>
+                <a class="language-EN">EN</a>
+            </div>
+            <div class="header-language-icon"></div>
         </div>
     </header>
     <div class="main-page">
         <div class="main-sidebar">
-            <div class="sidebar-item">
+            <div class="sidebar-item" id="home">Home</div>
+            <div class="sidebar-item" id="about">
                 <div class="sidebar-section">
-                    <div class="sidebar-section-text">Home</div>
+                    <div class="sidebar-section-text">About</div>
                     <div class="sidebar-section-icon"></div>
                 </div>
             </div>
-            <div class="sidebar-item">About</div>
-            <div class="sidebar-subitem">Wie ik ben</div>
-            <div class="sidebar-subitem">Wat ik kan</div>
-            <div class="sidebar-subitem">Mijn visie</div>
-            <div class="sidebar-item">ITalent</div>
-            <div class="sidebar-item">Portfolio</div>
-            <div class="sidebar-item">CV</div>
-            <div class="sidebar-item">Links</div>
-            <div class="sidebar-item">Contact</div>
+            <div class="sidebar-submenu">
+                <div class="sidebar-subitem" id="wieBenIk">Wie ik ben</div>
+                <div class="sidebar-subitem" id="watKanIk">Wat ik kan</div>
+                <div class="sidebar-subitem" id="mijnVisie">Mijn visie</div>
+            </div>
+            <div class="sidebar-item" id="italent">ITalent</div>
+            <div class="sidebar-item" id="portfolio">Portfolio</div>
+            <div class="sidebar-item" id="cv">CV</div>
+            <div class="sidebar-item" id="links">Links</div>
+            <div class="sidebar-item" id="contact">Contact</div>
         </div>
-        <div class="main-content">
+        <div class="main-content" id="mainContent">
             Main content
         </div>
     </div>
@@ -48,5 +50,6 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="js/homepage.js"></script>
+    <script type="text/javascript" src="js/pagedistribution.js"></script>
 </body>
 </html>
