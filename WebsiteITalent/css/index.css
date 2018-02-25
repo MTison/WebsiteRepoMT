@@ -147,9 +147,10 @@
 /*--- CONTENT REGION ---*/
 .main-content {
     font-family: Verdana;
-    overflow-y: hidden;
+    overflow-y: scroll;
     height: 100%;
     width: auto;
+    padding: 20px 20px 0 20px;
 }
 
 /*--- FOOTER REGION ---*/
@@ -164,4 +165,5 @@
     color: white;
     border-top: 1px solid;
     border-color: rgba(0, 0, 0, 0.25);
+    position: relative;
 }

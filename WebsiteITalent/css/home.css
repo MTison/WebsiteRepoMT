@@ -1,0 +1,53 @@
+.home-title {
+    text-align: center;
+    font-size: 30px;
+    height: 50px;
+}
+
+.home-title-divider {
+    height: 1.1px;
+    width: 80%;
+    background-color: rgba(28, 28, 28, 0.5);
+    margin: 0 auto; /*center the div in its container*/
+    border-radius: 50px;
+}
+
+.home-text {
+    margin-bottom: 50px;
+    padding-left: 30px;
+}
+
+.home-explanation {
+    position: relative;
+    cursor: default;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.home-tabdivider {
+    width: 2%;
+    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid;
+    border-right-style: groove;
+    transition: 0.5s;
+}
+
+.home-tab {
+    margin-left: 7%;
+    padding-left: 5px;
+    width: 80%;
+    transition: 0.5s;
+}
+
+.home-explanation:hover .home-tabdivider {
+    width: 3%;
+    transition: 0.3s;
+}
+
+.home-explanation:hover .home-tab {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.3s;
+} 
