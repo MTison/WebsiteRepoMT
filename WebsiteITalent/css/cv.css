@@ -1,0 +1,49 @@
+.cv-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cv-content {
+    height: 100%;
+    width: 100%;
+    display: inline;
+}
+
+.content-title {
+    font-weight: bold;
+    height: 30px;
+    transition: 0.3s
+}
+
+.cv-blok:hover .content-title {
+    padding-left: 10px;
+    transition: 0.5s;
+}
+
+.cv-blok {
+    width: 95%;
+    margin: 0 auto 25px;
+}
+
+.cv-blok:first-child {
+    display: flex;
+}
+
+.cv-subblok {
+    padding-left: 5px;
+    border-left: 1px groove;
+}
+
+.cv-subblok:first-child {
+    width: 31%;
+}
+
+.blok-content {
+    border: 1px solid;
+    font-size: 12px;
+    padding: 0 15px 0 15px;
+}
+
+.blok-content p u {
+    float: right;
+}

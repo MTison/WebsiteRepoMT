@@ -24,6 +24,7 @@ $(document).on("click", ".sidebar-item", function () {
 
     if ($(this).is("#about")) {
         setAbout($(this));
+        setSideBarSubItem($(".sidebar-subitem:first"))
         distributePageContent($(this));
     } else {
         setSideBarItem($(this));
@@ -92,7 +93,7 @@ function distributePageContent(element) {
             $("#mainContent").load("pages/home.html"); 
             break;
         case "about": 
-            $("#mainContent").load("pages/about.html"); 
+            $("#mainContent").load("pages/about_WieIkBen.html"); 
             break;
         case "italent": 
             $("#mainContent").load("pages/iTalent.html"); 

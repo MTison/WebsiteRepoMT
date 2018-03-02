@@ -22,8 +22,8 @@
 
 .header-language {
     float: right;
-    width: 100px;
-    margin: 7px 10px 0 0;
+    width: 110px;
+    margin: 8px 15px 0 0;
 }
 
 .language-text {
@@ -34,6 +34,7 @@
     float: left;
     width: 80%;
     padding-top: 5px;
+    margin: 0 auto;
     display: none;
 }
 
@@ -42,8 +43,8 @@
     margin-right: 15%;
 }
 
-.language-text a:hover {
-    color: white;
+.language-text a:hover,  .contact-text a:hover {
+    color: red;
 }
 
 .header-language-icon {
@@ -55,6 +56,7 @@
     float: right;
     border-radius: 10px;
 }
+
 .header-language-icon:hover {
     cursor: pointer;
     box-shadow: 0 0 4px white;
@@ -140,7 +142,7 @@
 }
 
 .sidebar-section-text {
-    width: 80px;
+    width: 60px;
     float: left;
 }
 
@@ -148,7 +150,7 @@
 .main-content {
     font-family: Verdana;
     overflow-y: scroll;
-    height: 100%;
+    height: 97%;
     width: auto;
     padding: 20px 20px 0 20px;
 }

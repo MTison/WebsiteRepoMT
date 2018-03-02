@@ -1,0 +1,53 @@
+.links-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.links-introtext {
+    padding-left: 15px;
+}
+
+.links-content {
+    width: 90%;
+    height: auto;
+    display: flex;
+    margin: 30px auto 0;
+}
+
+.links-blok {
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    width: 33%;
+    transition: 0.2s;
+}
+
+.links-blok img {
+    width: 100%;
+    filter: blur(10px);
+}
+
+.link-text {
+    color: black;
+    font-weight: bold;
+    /* this is to center the text over the image */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img:hover {
+    filter: none;
+}
+
+a:hover + .link-text{
+    display: none;
+}
+
+.links-blok:hover {
+    width: 100%;
+    transition: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+}
