@@ -1,15 +1,18 @@
 /*--- HEADER REGION ---*/
 .header-main {
-    height: 5%;
+    height: 10%;
     width: auto;
-    background-color: rgba(28, 28, 28, 0.7);
+    background-image: url(../images/banner_studying.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+/*    background-color: rgba(28, 28, 28, 0.7);*/
 }
 
 .header-icon {
     width: 80px;
     height: 65%;
     object-fit: cover;
-    margin: 5px 0 0 20px;
+    margin: 10px 0 0 20px;
     padding: 2px 4px 2px 4px;
     border-radius: 3px;
 }
@@ -23,14 +26,14 @@
 .header-language {
     float: right;
     width: 110px;
-    margin: 8px 15px 0 0;
+    margin: 25px 15px 0 0;
 }
 
 .language-text {
     font-family: Verdana;
     cursor: default;
     font-size: 10px;
-    color: rgba(239, 239, 239, 0.99);
+    color: rgba(180, 180, 180, 0.99);
     float: left;
     width: 80%;
     padding-top: 5px;
@@ -44,7 +47,7 @@
 }
 
 .language-text a:hover,  .contact-text a:hover {
-    color: red;
+    color: white;
 }
 
 .header-language-icon {
@@ -65,17 +68,18 @@
 
 /*--- SIDEBAR+CONTENT REGION ---*/
 .main-page {
-    height: 92%;
+    height: 87%;
     color: #464646;
     background-color: rgba(239, 239, 239, 0.6);
 }
 
 /*--- SIDEBAR REGION ---*/
 .main-sidebar {
+    font-family: Verdana;
     float: left;
     height: 100%;
     width: 120px;
-    background-color: rgba(28, 28, 28, 0.7);
+    background-color: #565656;
     /*    background: linear-gradient(to bottom right,#717171,rgba(157, 157, 157, 0.73));*/
     overflow-y: scroll;
 }
@@ -83,15 +87,14 @@
 .sidebar-item {
     height: 15px;
     padding: 8px 0 8px 10px;
-    color: ghostwhite;
-    font-family: Verdana;
+    color: white;
     font-size: 13px;
 }
 
 .sidebar-item.active {
     padding: 8px 0 8px 12px;
-    background-color: rgb(132, 132, 132);
-    color: whitesmoke;
+    background-color: #A9A9A9;
+    color: white;
 }
 
 .sidebar-submenu {
@@ -107,23 +110,53 @@
 }
 
 .sidebar-subitem.active {
-    background-color: rgb(132, 132, 132);
+    background-color: #A9A9A9;
     color: whitesmoke;
+}
+
+.sidebar-contact {
+    color: white;
+    font-size: 10px;
+    width: 120px;
+    position: absolute;
+    bottom: 10%;
+}
+
+.mail-contact {
+    background-image: url(../images/ic_contact_mail_white_24px.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15px;
+    width: 15px;
+    left: 15px;
+    position: absolute;
+}
+
+.fb-contact {
+    color: white;
+    height: 15px;
+    line-height: 15px;
+    right: 15px;
+    position: absolute;
 }
 
 .sidebar-item:hover {
     padding: 8px 0 8px 12px;
-    background-color: rgb(132, 132, 132);
+    background-color: #A9A9A9;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.sidebar-subitem:hover {
+    background-color: #A9A9A9;
     cursor: pointer;
     transition-duration: 0.2s;
     color: whitesmoke;
 }
 
-.sidebar-subitem:hover {
-    background-color: rgb(132, 132, 132);
+.mail-contact:hover, .fb-contact:hover {
+    top: 1px;
     cursor: pointer;
-    transition-duration: 0.2s;
-    color: whitesmoke;
 }
 
 .sidebar-section {
@@ -163,7 +196,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #848484;
+    background-color: #828081;
     color: white;
     border-top: 1px solid;
     border-color: rgba(0, 0, 0, 0.25);
