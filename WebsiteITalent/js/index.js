@@ -36,6 +36,7 @@ $(document).on("click", ".sidebar-item", function () {
 $(document).on("click", ".sidebar-subitem", function () {
     resetSideBarSubMenu();
     setSideBarSubItem($(this));
+    distributePageContent($(this));
 })
 
 function resetSideBarItem(element) {
@@ -45,6 +46,7 @@ function resetSideBarItem(element) {
         "transition": "0.2s"
     });
 }
+
 function resetSideBarSubItem(element) {
     element.removeClass("sidebar-subitem active");
     element.addClass("sidebar-subitem");
@@ -52,6 +54,7 @@ function resetSideBarSubItem(element) {
         "transition": "0.2s"
     });
 }
+
 function resetSideBarSubMenu() {
     $(".sidebar-subitem").each(function () {
         if ($(this).hasClass("sidebar-subitem active")) {
@@ -63,6 +66,7 @@ function resetSideBarSubMenu() {
 function setSideBarItem(element) {
     element.addClass("sidebar-item active");
 }
+
 function setSideBarSubItem(element) {
     element.addClass("sidebar-subitem active");
 }
@@ -88,27 +92,36 @@ function setAbout(element) {
 }
 
 function distributePageContent(element) {
-    switch(element.attr('id')) {
-        case "home": 
-            $("#mainContent").load("pages/home.html"); 
+    switch (element.attr('id')) {
+        case "home":
+            $("#mainContent").load("pages/home.html");
             break;
-        case "about": 
-            $("#mainContent").load("pages/about_WieIkBen.html"); 
+        case "about":
+            $("#mainContent").load("pages/about_WieBenIk.html");
             break;
-        case "italent": 
-            $("#mainContent").load("pages/iTalent.html"); 
+        case "wieBenIk":
+            $("#mainContent").load("pages/about_WieBenIk.html");
             break;
-        case "portfolio": 
-            $("#mainContent").load("pages/portfolio.html"); 
+        case "watKanIk":
+            $("#mainContent").load("pages/about_WatKanIk.html");
             break;
-        case "cv": 
-            $("#mainContent").load("pages/cv.html"); 
+        case "mijnVisie":
+            $("#mainContent").load("pages/about_MijnVisie.html");
             break;
-        case "links": 
-            $("#mainContent").load("pages/links.html"); 
+        case "italent":
+            $("#mainContent").load("pages/iTalent.html");
             break;
-        case "contact": 
-            $("#mainContent").load("pages/contact.html"); 
+        case "portfolio":
+            $("#mainContent").load("pages/portfolio.html");
+            break;
+        case "cv":
+            $("#mainContent").load("pages/cv.html");
+            break;
+        case "links":
+            $("#mainContent").load("pages/links.html");
+            break;
+        case "contact":
+            $("#mainContent").load("pages/contact.html");
             break;
     }
 }

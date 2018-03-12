@@ -1,0 +1,93 @@
+.about-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-introtext {
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+/* Wie ben ik SECTION */
+.about-wbi-pictures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0 20px 0;
+}
+
+.about-wbi-picture {
+    width: 20%;
+    margin: 0 10px;
+    transition: 0.2s;
+}
+
+.about-wbi-pictures img {
+    width: 100%;
+}
+
+.about-wbi-picture:hover {
+    width: 30%;
+    transition: 0.5s;
+}
+
+.about-wieBenIk {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    width: 50%;
+    height: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid;
+}
+
+.about-wbi-blok1 {
+    width: 35%;
+    font-weight: bold;
+}
+
+.about-wbi-blok2 {
+    width: 70%;
+}
+
+.about-wbi-text {
+    font-size: 14px;
+    width: 95%;
+    padding-left: 15px;
+}
+
+/* Wat kan ik SECTION */
+.about-wki-blok {
+    padding-left: 15px;
+    width: 100%;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-wki-blok:last-child {
+    margin-bottom: 20px;
+}
+
+.about-wki-blokText {
+    width: 85%;
+}
+
+.about-wki-picture {
+    width: 200px;
+    margin: 0 20px;
+}
+
+.about-wki-picture img {
+    width: 100%;
+}
+
+.about-wki-picture a:hover {
+    cursor: zoom-in;
+}
+
+/* Mijn visie SECTION */
+
