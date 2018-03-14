@@ -8,6 +8,13 @@
 /*    background-color: rgba(28, 28, 28, 0.7);*/
 }
 
+.header-text_icon {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
 .header-icon {
     width: 80px;
     height: 65%;
@@ -17,6 +24,13 @@
     border-radius: 3px;
 }
 
+.header-text {
+    font-family: Verdana;
+    color: white;
+    font-size: 11px;
+    margin: auto 0 auto 10;
+}
+
 .header-icon:hover {
     cursor: pointer;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.20);
@@ -24,29 +38,35 @@
 }
 
 .header-language {
+    width: 120px;
+    margin: 25px 20px 0 0;
     float: right;
-    width: 110px;
-    margin: 25px 15px 0 0;
 }
 
 .language-text {
     font-family: Verdana;
     cursor: default;
     font-size: 10px;
-    color: rgba(180, 180, 180, 0.99);
-    float: left;
-    width: 80%;
+    width: 100px;
     padding-top: 5px;
-    margin: 0 auto;
     display: none;
+    float: left;
 }
 
-.language-NL,
-.language-FR {
+.language-NL {
     margin-right: 15%;
+    text-decoration: none;
+    color: white;
 }
 
-.language-text a:hover,  .contact-text a:hover {
+.language-FR,
+.language-EN {
+    margin-right: 15%;
+    text-decoration: none;
+    color: rgba(180, 180, 180, 0.99);
+}
+
+.language-text a:hover {
     color: white;
 }
 
@@ -54,9 +74,9 @@
     background-image: url(../images/ic_language_white_48px.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    float: right;
     height: 20px;
     width: 20px;
-    float: right;
     border-radius: 10px;
 }
 
@@ -81,7 +101,7 @@
     width: 120px;
     background-color: #565656;
     /*    background: linear-gradient(to bottom right,#717171,rgba(157, 157, 157, 0.73));*/
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .sidebar-item {
@@ -182,7 +202,7 @@
 /*--- CONTENT REGION ---*/
 .main-content {
     font-family: Verdana;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 97%;
     width: auto;
     padding: 20px 20px 0 20px;

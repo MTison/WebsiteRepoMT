@@ -39,6 +39,12 @@ $(document).on("click", ".sidebar-subitem", function () {
     distributePageContent($(this));
 })
 
+$(document).on("click", "#visie1", function () { 
+    $(this).css({
+        "animation": "shake 0.5s"
+    });
+})
+
 function resetSideBarItem(element) {
     element.removeClass("sidebar-item active");
     element.addClass("sidebar-item");
