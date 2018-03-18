@@ -8,58 +8,60 @@
     <link href="css/home.css" rel="stylesheet">
     <link href="css/about.css" rel="stylesheet">
     <link href="css/iTalent.css" rel="stylesheet">
+    <link href="css/portfolio.css" rel="stylesheet">
     <link href="css/cv.css" rel="stylesheet">
     <link href="css/links.css" rel="stylesheet">
     <link href="css/contact.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header-main">
+    <div class="header-main">
         <div class="header-text_icon">
             <a href="https://www.hogent.be/en/" target="_blank">
-            <image class="header-icon" src="images/logo_HoGent_wit.png"></image>
-        </a>
-        <div class="header-text">Hogeschool Gent <br />Matthias Tison - e-portfolio</div>
+                <image class="header-icon" src="images/logo_HoGent_wit.png"></image>
+            </a>
+            <div class="header-text">Hogeschool Gent <br />Matthias Tison - Eportfolio</div>
+        </div>
+        <div class="header-nav">
+            <div class="header-item" id="home">Home</div>
+            <div class="header-item" id="about">About</div>
+            <div class="header-item" id="italent">ITalent</div>
+            <div class="header-item" id="portfolio">Portfolio</div>
+            <div class="header-item" id="cv">CV</div>
+            <div class="header-item" id="links">Links</div>
+            <div class="header-item" id="contact">Contact</div>
         </div>
         <div class="header-language">
-            <div class="language-text">
-                <a class="language-NL" href=".">NL</a>
-                <a class="language-FR" href=".">FR</a>
-                <a class="language-EN" href=".">EN</a>
-            </div>
-            <div class="header-language-icon"></div>
+            <a class="language-NL" href=".">NL</a>
+            <a class="language-FR" href=".">FR</a>
+            <a class="language-EN" href=".">EN</a>
         </div>
-    </header>
-    <div class="main-page">
-        <div class="main-sidebar">
-            <div class="sidebar-item" id="home">Home</div>
-            <div class="sidebar-item" id="about">
-                <div class="sidebar-section">
-                    <div class="sidebar-section-text">About</div>
-                    <div class="sidebar-section-icon"></div>
-                </div>
-            </div>
+    </div>
+    <!--
             <div class="sidebar-submenu">
                 <div class="sidebar-subitem" id="wieBenIk">Wie ik ben</div>
                 <div class="sidebar-subitem" id="watKanIk">Wat ik kan</div>
                 <div class="sidebar-subitem" id="mijnVisie">Mijn visie</div>
             </div>
-            <div class="sidebar-item" id="italent">ITalent</div>
-            <div class="sidebar-item" id="portfolio">Portfolio</div>
-            <div class="sidebar-item" id="cv">CV</div>
-            <div class="sidebar-item" id="links">Links</div>
-            <div class="sidebar-item" id="contact">Contact</div>
-            <div class="sidebar-contact">
-                <a href="mailto:MatthiasTison@hotmail.com"><div class="mail-contact"></div></a>
-                <a href="https://www.facebook.com" target="_blank"><div class="fb-contact">Facebook</div></a>
-            </div>
-        </div>
-        <div class="main-content" id="mainContent">
-            Main content
-        </div>
+-->
+    <div class="main-content" id="mainContent">
+        Main content
     </div>
     <footer class="main-footer">
-        HoGent produtions - in Brackets
+        <div class="footer-blok">
+            <div class="footer-title">HoGent produtions</div>
+            <div class="footer-text">in Brackets</div>
+        </div>
+<!--
+        <div class="sidebar-contact">
+            <a href="mailto:MatthiasTison@hotmail.com">
+                <div class="mail-contact"></div>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <div class="fb-contact">Facebook</div>
+            </a>
+        </div>
+-->
     </footer>
 
     <script src="https://code.jquery.com/jquery.js"></script>

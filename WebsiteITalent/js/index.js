@@ -1,100 +1,72 @@
 /*eslint-env jquery*/
 
 $(document).ready(function () {
-    setSideBarItem($(".sidebar-item:first"));
-    distributePageContent($(".sidebar-item:first"));
+    setHeaderItem($(".header-item:first"));
+    distributePageContent($(".header-item:first"));
 })
 
-/*fade in and out of the language choose menu (rigth top of screen)*/
-$(document).on("click", ".header-language-icon", function () {
-    $(".language-text").fadeToggle(0);
-})
-
-/*activate and reset sidebarItem*/
-$(document).on("click", ".sidebar-item", function () {
-    $(".sidebar-item").each(function () {
-        if ($(this).hasClass("sidebar-item active")) {
-            resetSideBarItem($(this));
-            resetSideBarSubMenu(); /*reset sidebar submenu when clicking on sidebarItem*/
-            if ($(this).is("#about")) {
-                resetAbout();
-            }
+/*activate and reset navbarItem*/
+$(document).on("click", ".header-item", function () {
+    $(".header-item").each(function () {
+        if ($(this).hasClass("header-item active")) {
+            resetHeaderItem($(this)); /*reset navbaritem when clicking on navbarItem*/
         }
     });
 
-    if ($(this).is("#about")) {
-        setAbout($(this));
-        setSideBarSubItem($(".sidebar-subitem:first"))
-        distributePageContent($(this));
-    } else {
-        setSideBarItem($(this));
-        distributePageContent($(this));
-    }
-})
-
-/*activate and reset sidebarSubItem*/
-$(document).on("click", ".sidebar-subitem", function () {
-    resetSideBarSubMenu();
-    setSideBarSubItem($(this));
+    setHeaderItem($(this));
     distributePageContent($(this));
 })
 
-$(document).on("click", "#visie1", function () { 
-    $(this).css({
-        "animation": "shake 0.5s"
-    });
+$(document).on("click", ".about-linkTop", function () {
+    $('body').animate({
+        scrollTop: 0
+    }, 'slow');
 })
 
-function resetSideBarItem(element) {
-    element.removeClass("sidebar-item active");
-    element.addClass("sidebar-item");
+$(document).on("click", ".italent-blok", function () {
+    switch ($(this).attr('id')) {
+        case "i1talent":
+            list($("#i1talentList"));
+            break;
+        case "i2talent":
+            list($("#i2talentList"));
+            break;
+        case "i3talent":
+            list($("#i3talentList"));
+            break;
+    }
+})
+
+function list(element) {
+    if (element.css("display") == "block") {
+        element.css({
+            "display": "none"
+        });
+    } else {
+        $(".italent-list").each(function () {
+            $(this).css({
+                "display": "none"
+            });
+        });
+
+        element.css({
+            "animation": "fadein 0.8s",
+            "display": "block",
+            "opacity": "1"
+        });
+    }
+}
+
+function resetHeaderItem(element) {
+    element.removeClass("header-item active");
+    element.addClass("header-item");
     element.css({
         "transition": "0.2s"
     });
 }
 
-function resetSideBarSubItem(element) {
-    element.removeClass("sidebar-subitem active");
-    element.addClass("sidebar-subitem");
-    element.css({
-        "transition": "0.2s"
-    });
-}
-
-function resetSideBarSubMenu() {
-    $(".sidebar-subitem").each(function () {
-        if ($(this).hasClass("sidebar-subitem active")) {
-            resetSideBarSubItem($(this));
-        }
-    });
-}
-
-function setSideBarItem(element) {
-    element.addClass("sidebar-item active");
-}
-
-function setSideBarSubItem(element) {
-    element.addClass("sidebar-subitem active");
-}
-
-function resetAbout() {
-    $(".sidebar-section-icon").css({
-        "background-image": "url(../images/ic_keyboard_arrow_left_black_48px.svg)"
-    });
-    $(".sidebar-submenu").css({
-        "display": "none"
-    });
-}
-
-function setAbout(element) {
-    $(".sidebar-section-icon").css({
-        "background-image": "url(../images/ic_keyboard_arrow_down_black_48px.svg)"
-    });
-    $(".sidebar-submenu").css({
-        "display": "block"
-    });
-
-    element.addClass("sidebar-item active");
+function setHeaderItem(element) {
+    element.addClass("header-item active");
 }
 
 function distributePageContent(element) {
@@ -103,16 +75,7 @@ function distributePageContent(element) {
             $("#mainContent").load("pages/home.html");
             break;
         case "about":
-            $("#mainContent").load("pages/about_WieBenIk.html");
-            break;
-        case "wieBenIk":
-            $("#mainContent").load("pages/about_WieBenIk.html");
-            break;
-        case "watKanIk":
-            $("#mainContent").load("pages/about_WatKanIk.html");
-            break;
-        case "mijnVisie":
-            $("#mainContent").load("pages/about_MijnVisie.html");
+            $("#mainContent").load("pages/about.html");
             break;
         case "italent":
             $("#mainContent").load("pages/iTalent.html");
@@ -128,6 +91,35 @@ function distributePageContent(element) {
             break;
         case "contact":
             $("#mainContent").load("pages/contact.html");
+            break;
+    }
+}
+
+function distributePageContentItalent(element) {
+    switch (element) {
+        case "I2T_1":
+            $("#opdracht-content").html(
+                "<div class='opdracht-title_link'> <div class='opdracht-title'>Hofman test</div><div class='opdracht-linkClose'>✖︎</div> </div>" +
+                "<object data='PDF/HofmanTest.pdf' type='application/pdf' width='100%' height='100%'> <iframe src ='PDF/HofmanTest.pdf' width='100% 'height='100%' style='border: none;'> This browser does not support PDFs.Please download the PDF to view it:<a href = 'PDF/HofmanTest.pdf'> Download PDF </a></iframe> </object>"
+            );
+            break;
+        case "I2T_2":
+            $("#opdracht-content").html(
+                "<div class='opdracht-title_link'> <div class='opdracht-title'>Competence indicator test</div><div class='opdracht-linkClose'>✖︎</div> </div>" +
+                "<object data='PDF/CompetenceIndicator.pdf' type='application/pdf' width='100%' height='100%'> <iframe src ='PDF/CompetenceIndicator.pdf' width='100% 'height='100%' style='border: none;'> This browser does not support PDFs.Please download the PDF to view it:<a href = 'PDF/CompetenceIndicator.pdf'> Download PDF </a></iframe> </object>"
+            );
+            break;
+        case "I2T_3":
+            $("#opdracht-content").html(
+                "<div class='opdracht-title_link'> <div class='opdracht-title'>Workshop creatief denken reflectie</div><div class='opdracht-linkClose'>✖︎</div> </div>" +
+                "<object data='PDF/Tison_Matthias_CreatiefDenken_reflectie.pdf' type='application/pdf' width='100%' height='100%'> <iframe src ='PDF/Tison_Matthias_CreatiefDenken_reflectie.pdf' width='100% 'height='100%' style='border: none;'> This browser does not support PDFs.Please download the PDF to view it:<a href = 'PDF/Tison_Matthias_CreatiefDenken_reflectie.pdf'> Download PDF </a></iframe> </object>"
+            );
+            break;
+        case "I2T_4":
+            $("#opdracht-content").html(
+                "<div class='opdracht-title_link'> <div class='opdracht-title'>Jobprofielen</div><div class='opdracht-linkClose'>✖︎</div> </div>" +
+                "<object data='PDF/MatthiasTison_Opdracht6_Jobprofielen.pdf' type='application/pdf' width='100%' height='100%'> <iframe src ='PDF/MatthiasTison_Opdracht6_Jobprofielen.pdf' width='100% 'height='100%' style='border: none;'> This browser does not support PDFs.Please download the PDF to view it:<a href = 'PDF/MatthiasTison_Opdracht6_Jobprofielen.pdf'> Download PDF </a></iframe> </object>"
+            );
             break;
     }
 }
